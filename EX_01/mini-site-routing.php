@@ -48,8 +48,8 @@ afficher_pages();
 <p>
     <?php
     function verifier_session(){
-    if (isset($_SESSION['user_id'])) {
-        echo "Login :" , $_SESSION['user_id'];
+    if (isset($_SESSION['id'])) {
+        echo "Login :" , $_SESSION['id'];
     }
     elseif(isset($_COOKIE['cookie'])){
         setcookie("cookie", $_SESSION['user_id']);
@@ -60,6 +60,9 @@ afficher_pages();
     }
 }
     verifier_session();
+    ?>
+    <?php 
+    if(isset($_SESSION))
     ?>
 </p>
 
